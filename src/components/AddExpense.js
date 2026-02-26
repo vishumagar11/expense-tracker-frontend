@@ -16,7 +16,7 @@ function AddExpense() {
         "https://expense-tracker-backend-4v2m.onrender.com/api/expenses/",
         {
             title: title,
-            amount: amount,
+         amount: Number(amount), 
             category: category,
             date: date
         }
