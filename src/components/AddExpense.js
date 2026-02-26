@@ -32,7 +32,7 @@ function AddExpense() {
     .catch(error => {
 
         console.log(error)
-
+        console.log("Backend Error:", error.response.data)
         alert("Error Adding Expense")
 
     })
