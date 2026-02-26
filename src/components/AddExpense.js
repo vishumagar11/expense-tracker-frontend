@@ -12,7 +12,7 @@ function AddExpense() {
 
     const submit = () => {
 
-        axios.post("http://localhost:8000/api/expenses/", {
+        axios.post("https://expense-tracker-backend-4v2m.onrender.com/api/expenses/", {
 
             title,
             amount,

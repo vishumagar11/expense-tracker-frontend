@@ -17,7 +17,7 @@ function EditExpense() {
     useEffect(() => {
 
     axios.get(
-        "http://localhost:8000/api/expenses/" + id + "/"
+        "https://expense-tracker-backend-4v2m.onrender.com/api/expenses/" + id + "/"
     )
 
     .then(res => {
@@ -35,7 +35,7 @@ function EditExpense() {
     const update = () => {
 
         axios.put(
-            "http://localhost:8000/api/expenses/" + id + "/",
+            "https://expense-tracker-backend-4v2m.onrender.com/api/expenses/" + id + "/",
             {
                 title,
                 amount,

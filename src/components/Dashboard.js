@@ -20,7 +20,7 @@ function Dashboard() {
     const [data, setData] = useState([])
     useEffect(() => {
         axios.get(
-            "http://localhost:8000/api/summary/"
+            "https://expense-tracker-backend-4v2m.onrender.com/api/summary/"
         )
             .then(res => setData(res.data.categories))
     }, [])

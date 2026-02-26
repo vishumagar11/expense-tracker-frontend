@@ -6,7 +6,7 @@ function Currency() {
 
     useEffect(() => {
         axios.get(
-            "http://localhost:8000/api/currency/").then(res => setRates(res.data.rates))}, [])
+            "https://expense-tracker-backend-4v2m.onrender.com/api/currency/").then(res => setRates(res.data.rates))}, [])
     return (
         <div className="currencyValue">
             <h3>Currency Rates</h3>

@@ -6,7 +6,7 @@ function ExpenseList() {
 
     const [data, setData] = useState([])
     useEffect(() => {
-        axios.get("http://localhost:8000/api/expenses/")
+        axios.get("https://expense-tracker-backend-4v2m.onrender.com/api/expenses/")
             .then(res => setData(res.data))
     }, [])
 
@@ -14,7 +14,7 @@ function ExpenseList() {
     const del = (id) => {
 
         axios.delete(
-            "http://localhost:8000/api/expenses/" + id + "/"
+            "https://expense-tracker-backend-4v2m.onrender.com/api/expenses/" + id + "/"
         )
 
         window.location.reload()
