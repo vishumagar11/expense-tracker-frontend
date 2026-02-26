@@ -13,13 +13,25 @@ function ExpenseList() {
 
     const del = (id) => {
 
-        axios.delete(
-            "https://expense-tracker-backend-4v2m.onrender.com/api/expenses/" + id + "/"
-        )
+    axios.delete(
+        "https://expense-tracker-backend-4v2m.onrender.com/api/expenses/" + id + "/"
+    )
+    .then(() => {
+
+        alert("Deleted Successfully")
 
         window.location.reload()
 
-    }
+    })
+    .catch(error => {
+
+        console.log(error.response?.data)
+
+        alert("Delete Failed")
+
+    })
+
+}
 
 
     return (
