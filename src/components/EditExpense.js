@@ -16,20 +16,20 @@ function EditExpense() {
 
     useEffect(() => {
 
-        axios.get(
-            "http://localhost:8000/api/expenses/" + id + "/"
-        )
+    axios.get(
+        "http://localhost:8000/api/expenses/" + id + "/"
+    )
 
-            .then(res => {
+    .then(res => {
 
-                setTitle(res.data.title)
-                setAmount(res.data.amount)
-                setCategory(res.data.category)
-                setDate(res.data.date)
+        setTitle(res.data.title)
+        setAmount(res.data.amount)
+        setCategory(res.data.category)
+        setDate(res.data.date)
 
-            })
+    })
 
-    }, [])
+}, [id])
 
 
     const update = () => {
