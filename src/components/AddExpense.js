@@ -12,18 +12,32 @@ function AddExpense() {
 
     const submit = () => {
 
-        axios.post("https://expense-tracker-backend-4v2m.onrender.com/api/expenses/", {
+    axios.post(
+        "https://expense-tracker-backend-4v2m.onrender.com/api/expenses/",
+        {
+            title: title,
+            amount: amount,
+            category: category,
+            date: date
+        }
+    )
+    .then(res => {
 
-            title,
-            amount,
-            category,
-            date
+        alert("Expense Added Successfully")
 
-        })
+        // refresh list
+        window.location.reload()
 
-        alert("Expense Added")
+    })
+    .catch(error => {
 
-    }
+        console.log(error)
+
+        alert("Error Adding Expense")
+
+    })
+
+}
 
     return (
 
